@@ -1,0 +1,23 @@
+{
+  "name": "ajpngasm",
+  "version": "1.1.0",
+  "description": "Create AJPNG animations",
+  "repository": "git@github.com:MadeInHaus/ajpngasm.git",
+  "main": "index.js",
+  "bin": {
+    "ajpngasm": "index.js"
+  },
+  "scripts": {},
+  "author": "Claus Wahlers <claus@codeazur.com.br> (http://wahlers.com.br/claus/)",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "glob": "^7.0.5",
+    "jpg-stream": "^1.1.1",
+    "lodash": "^4.14.0",
+    "pngjs": "^2.3.1",
+    "pngquant": "^1.1.1",
+    "streamifier": "^0.1.1",
+    "temp": "^0.8.3"
+  }
+}
