@@ -6,6 +6,7 @@ var temp = require('temp');
 var options = require('commander');
 var createFrames = require('./lib/createFrames');
 var createAJPNG = require('./lib/createAJPNG');
+var pkg = require('./package.json');
 
 function _parseInt(val, def) {
     const parsedVal = parseInt(val, 10);
@@ -13,7 +14,7 @@ function _parseInt(val, def) {
 }
 
 options
-    .version('1.0.0')
+    .version(pkg.version)
     .usage('[options] <png ...>')
     .option('-o, --output <png>', 'output file name')
     .option('-f, --fps [value]', 'frame rate (default: 15)', _parseInt, 15)

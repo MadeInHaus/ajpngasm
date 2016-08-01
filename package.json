@@ -1,6 +1,6 @@
 {
   "name": "ajpngasm",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create AJPNG animations",
   "repository": "git@github.com:MadeInHaus/ajpngasm.git",
   "main": "index.js",
