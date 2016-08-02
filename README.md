@@ -7,7 +7,8 @@ with the difference that in addition to PNG data, frames can contain JPEG and/or
 
 ## Usage
 
-```$ ajpngasm
+```
+$ ajpngasm
 
   Usage: ajpngasm [options] <png ...>
 
