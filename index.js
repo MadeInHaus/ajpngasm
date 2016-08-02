@@ -75,10 +75,12 @@ function start(files) {
                     })
                     .catch(err => {
                         console.error(`ERROR: ${err.message}`);
+                        process.exit(1);
                     });
             })
             .catch(err => {
                 console.error(`ERROR: ${err.message}`);
+                process.exit(1);
             });
     });
 }
