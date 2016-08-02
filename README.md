@@ -33,3 +33,6 @@ $ ajpngasm
     --slicer-margin-left [value]    slicer: left margin
 ```
 
+## License
+
+MIT
