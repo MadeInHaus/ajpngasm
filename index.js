@@ -16,11 +16,11 @@ function _parseInt(val, def) {
 options
     .version(pkg.version)
     .usage('[options] <png ...>')
-    .option('-o, --output <png>', 'output file name')
-    .option('-f, --fps [value]', 'frame rate (default: 15)', _parseInt, 15)
-    .option('-l, --loops [value]', 'number of loops to play (default: 0)', _parseInt, 0)
-    .option('-p, --png-quality [value]', 'pngquant quality (default: 16)', _parseInt, 16)
-    .option('-j, --jpg-quality [value]', 'jpeg quality (default: 70)', _parseInt, 70)
+    .option('-o, --output <png>', 'set output file name')
+    .option('-f, --fps [value]', 'set frame rate (default: 15)', _parseInt, 15)
+    .option('-l, --loops [value]', 'set number of loops to play (default: 0)', _parseInt, 0)
+    .option('-p, --png-quality [value]', 'set pngquant quality (default: 16)', _parseInt, 16)
+    .option('-j, --jpg-quality [value]', 'set jpeg quality (default: 70)', _parseInt, 70)
     .option('-d, --dispose-op [value]', 'none|background|previous (default: background)', /^(none|background|previous)$/i, 'background')
     .option('-b, --blend-op [value]', 'source|over (default: source)', /^(source|over)$/i, 'source')
     .option('-q, --quiet', 'do not log anything to stdout')
@@ -31,6 +31,8 @@ options
     .option('--slicer-margin-right [value]', 'slicer: right margin', _parseInt, 0)
     .option('--slicer-margin-bottom [value]', 'slicer: bottom margin', _parseInt, 0)
     .option('--slicer-margin-left [value]', 'slicer: left margin', _parseInt, 0)
+    // .option('--export <value>', 'export frames to folder')
+    // .option('--import <value>', 'import frames from folder')
     .parse(process.argv);
 
 if (options.args.length) {
