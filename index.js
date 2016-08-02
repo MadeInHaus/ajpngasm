@@ -65,22 +65,14 @@ function createTempDir() {
 }
 
 function start(files) {
-    createTempDir().then(dir => {
-        createFrames(files, dir, options)
-            .then(manifest => {
-                createAJPNG(manifest, options)
-                    .then(stream => {
-                        const wStream = options.output ? fs.createWriteStream(options.output) : process.stdout;
-                        stream.pipe(wStream);
-                    })
-                    .catch(err => {
-                        console.error(`ERROR: ${err.message}`);
-                        process.exit(1);
-                    });
-            })
-            .catch(err => {
-                console.error(`ERROR: ${err.message}`);
-                process.exit(1);
-            });
-    });
+    createTempDir()
+        .then(dir => createFrames(files, dir, options))
+        .then(manifest => createAJPNG(manifest, options))
+        .then(stream => {
+            stream.pipe(options.output ? fs.createWriteStream(options.output) : process.stdout);
+        })
+        .catch(err => {
+            console.error(`ERROR: ${err.message}`);
+            process.exit(1);
+        });
 }
